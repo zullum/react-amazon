@@ -17,10 +17,7 @@ function ProductFeed({ products }) {
           />
         ))}
       <div className="md:col-span-full mx-auto">
-        <img
-          src="https://images-eu.ssl-images-amazon.com/images/G/31/img16/imports/GREAT/Banner-stripe_PC_1500-x-300._V536323387_.jpg"
-          alt=""
-        />
+        <img src="/images/amazonbanner.jpg" alt="" />
       </div>
 
       <div className="md:col-span-2">
