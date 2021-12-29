@@ -92,6 +92,13 @@ export default Header;
 
 export async function getServerSideProps(context) {
   const session = await getSession();
+
+  if (!session) {
+    return {
+      props: {},
+    };
+  }
+
   return {
     props: {
       session,
