@@ -5,7 +5,7 @@ import {
   SearchIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
-import { signIn, signOut, useSession } from "next-auth/react";
+import { getSession, signIn, signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { selectItems } from "../slices/basketSlice";
@@ -89,3 +89,12 @@ const Header = () => {
 };
 
 export default Header;
+
+export async function getServerSideProps(context) {
+  const session = await getSession();
+  return {
+    props: {
+      session,
+    },
+  };
+}
