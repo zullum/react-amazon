@@ -91,7 +91,7 @@ const Header = () => {
 export default Header;
 
 export async function getServerSideProps(context) {
-  const session = await getSession();
+  const session = await getSession(context);
 
   if (!session) {
     return {
